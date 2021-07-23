@@ -1,0 +1,48 @@
+div:hover{
+    border: 3px dashed black;
+}
+
+div:nth-of-type(1){
+    background-color: blue;
+}
+    
+div:nth-of-type(2){
+    background-color: purple;
+}
+
+div:nth-of-type(3){
+    background-color: yellow;
+    height: 50px;
+}
+
+div:nth-of-type(4){
+    background-color: gray;
+}
+
+div:nth-of-type(5){
+    background-color: rgb(159, 214, 159);
+}
+
+h3:nth-of-type(1){
+    font-variant: small-caps;
+}
+
+h3:nth-of-type(2){
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3:nth-of-type(3){
+    font-size: 3em;
+}
+
+h3:nth-of-type(4){
+   font-weight: 900;
+}
+
+h3:nth-of-type(5){
+    margin: 30px;
+}
+
+div:nth-child(odd) h3{
+    font-style: italic;
+}
