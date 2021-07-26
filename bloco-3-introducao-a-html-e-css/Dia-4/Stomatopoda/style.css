@@ -1,3 +1,49 @@
-.video{
-    display: inline-block;
+ footer, nav{
+    border-top: 1px black solid;
 }
+
+header{
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+    text-align: center;
+}
+
+body{
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+nav{
+    border-bottom: 1px black solid;
+}
+
+nav ul li{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+}
+
+table, th, td {
+    border: 1px black solid;
+    width: 25%;
+    margin: auto;
+}
+
+
+ul li{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+ } 
+
+aside{
+    background-color: aqua;
+    padding: 10px;
+    margin: auto;
+    width: 300px;
+    border-radius: 5px;
+ }
