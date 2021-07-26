@@ -23,10 +23,11 @@ nav{
     background-color: rgb(179, 247, 185);
 }
 
-nav ul li{
+nav ul li a{
     display: inline-block;
     text-decoration: none;
     padding: 10px;
+    color: black;
 }
 
 table, th, td {
@@ -42,12 +43,23 @@ ul li{
     padding: 10px;
  } 
 
+ section ul li a{
+    text-decoration: none;
+    color: black;
+    display: list-item;
+ }
+
 aside{
     background-color: aqua;
     padding: 10px;
     margin: auto;
     width: 300px;
     border-radius: 9px;
+ }
+
+ aside a{
+    text-decoration: none;
+    color: black;
  }
 
  article{
