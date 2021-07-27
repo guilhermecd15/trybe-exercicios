@@ -53,8 +53,11 @@ aside{
     background-color: aqua;
     padding: 10px;
     margin: auto;
-    width: 300px;
+    width: 10vh;
     border-radius: 9px;
+    float: right;
+    height: 1766px;
+    display: inline-block;
  }
 
  aside a{
@@ -65,4 +68,10 @@ aside{
  article{
     margin-top: 0px;
     padding: 5px;
+ }
+
+ main{
+     width: 80vh;
+     display: inline-block;
+
  }
