@@ -1,0 +1,77 @@
+ footer, nav{
+    border-top: 1px black solid;
+}
+
+header{
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(96, 177, 96);
+}
+
+body{
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+nav{
+    border-bottom: 1px black solid;
+    background-color: rgb(179, 247, 185);
+}
+
+nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+table, th, td {
+    border: 1px black solid;
+    width: 25%;
+    margin: auto;
+}
+
+
+ul li{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+ } 
+
+ section ul li a{
+    text-decoration: none;
+    color: black;
+    display: list-item;
+ }
+
+aside{
+    background-color: aqua;
+    padding: 10px;
+    margin: auto;
+    width: 10vh;
+    border-radius: 9px;
+    float: right;
+    height: 1766px;
+    display: inline-block;
+ }
+
+ aside a{
+    text-decoration: none;
+    color: black;
+ }
+
+ article{
+    margin-top: 0px;
+    padding: 5px;
+ }
+
+ main{
+     width: 80vh;
+     display: inline-block;
+
+ }
