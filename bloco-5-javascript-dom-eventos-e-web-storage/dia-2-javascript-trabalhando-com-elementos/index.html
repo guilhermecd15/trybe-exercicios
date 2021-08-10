@@ -79,7 +79,15 @@
       lc.appendChild(im);
       im.src = 'https://picsum.photos/200';
       im.className = 'small-image';
-      
+      let list = document.createElement('ul');
+      rc.appendChild(list);
+      let a = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'] 
+      for (let i = 0; i < a.length; i+= 1){
+        let num = a[i];
+        let numList = document.createElement('li');
+        numList.innerHTML = num;
+        list.appendChild(numList); 
+      }
     </script>
   </body>
 </html>
