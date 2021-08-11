@@ -32,7 +32,7 @@ function createDaysOfTheMonth() {
       dayItem.className = 'day fryday';
       dayItem.innerHTML = day;
       monthDaysList.appendChild(dayItem)
-    }else{
+    } else {
       dayItem.className = 'day';
       dayItem.innerHTML = day;
       monthDaysList.appendChild(dayItem)
@@ -41,3 +41,13 @@ function createDaysOfTheMonth() {
 }
 
 createDaysOfTheMonth();
+
+function showHoliday(name){
+  const bc = document.querySelector('.buttons-container');
+  const newB = document.createElement('button');
+  newB.id = 'btn-holiday';
+  newB.innerHTML = name;
+  bc.appendChild(newB);
+}
+
+showHoliday('feriados');
