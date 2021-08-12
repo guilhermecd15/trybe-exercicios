@@ -111,12 +111,21 @@ function dzoom(evento){
 d.addEventListener('mouseover', zoom);
 d.addEventListener('mouseout', dzoom);
 
+const mytasks = document.querySelector('.my-tasks');
 
 function addTask(tasks){
-  const mytasks = document.querySelector('.my-tasks');
   const nTask = document.createElement('span');
   nTask.innerHTML = tasks;
   mytasks.appendChild(nTask);
 }
 
 addTask('cozinhar');
+
+function legendColor(cor){
+  const colorTask = document.createElement('div');
+  colorTask.className = 'task';
+  colorTask.style.backgroundColor = cor;
+  mytasks.appendChild(colorTask);
+}
+
+legendColor('green')
