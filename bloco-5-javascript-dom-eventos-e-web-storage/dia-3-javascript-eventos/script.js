@@ -97,3 +97,17 @@ function showFriday(){
 }
 
 newBFriday.addEventListener('click', showFriday);
+
+let d = document.querySelector('#days');
+
+function zoom(evento){
+  evento.target.style.fontSize = '30px';
+}
+
+function dzoom(evento){
+  evento.target.style.fontSize = '20px';
+}
+
+d.addEventListener('mouseover', zoom);
+d.addEventListener('mouseout', dzoom);
+
