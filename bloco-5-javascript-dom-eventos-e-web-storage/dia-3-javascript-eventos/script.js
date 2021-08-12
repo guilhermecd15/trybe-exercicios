@@ -121,8 +121,9 @@ function addTask(tasks) {
 
 addTask('cozinhar');
 
+const colorTask = document.createElement('div');
+
 function legendColor(cor) {
-  const colorTask = document.createElement('div');
   colorTask.className = 'task';
   colorTask.style.backgroundColor = cor;
   mytasks.appendChild(colorTask);
@@ -131,13 +132,32 @@ function legendColor(cor) {
 legendColor('green')
 
 const LegTask = document.querySelector('.task')
+const taskSelected = document.getElementsByClassName('task selected');
 
 function selectedTask(evento) {
-  const taskSelected = document.getElementsByClassName('task selected');
   if (taskSelected.length === 1) {
     evento.target.className = 'task';
   } else {
     evento.target.className = 'task selected';
   }
 }
+
 LegTask.addEventListener('click', selectedTask);
+
+const colorGreen = colorTask.style.backgroundColor;
+const colorPadrao = 'rgb(119,119,119)';
+let colorGet =  colorPadrao;
+
+function colorDay(evento) {
+  colorGet =  evento.target.style.color;
+
+  if (taskSelected.length === 1 && colorGet === colorGreen) {
+    evento.target.style.color = colorPadrao;
+  }
+
+  if (taskSelected.length === 1 && colorGet !== colorGreen) {
+    evento.target.style.color = colorGreen;
+  }
+}
+
+d.addEventListener('click', colorDay);
