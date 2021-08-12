@@ -111,3 +111,12 @@ function dzoom(evento){
 d.addEventListener('mouseover', zoom);
 d.addEventListener('mouseout', dzoom);
 
+
+function addTask(tasks){
+  const mytasks = document.querySelector('.my-tasks');
+  const nTask = document.createElement('span');
+  nTask.innerHTML = tasks;
+  mytasks.appendChild(nTask);
+}
+
+addTask('cozinhar');
