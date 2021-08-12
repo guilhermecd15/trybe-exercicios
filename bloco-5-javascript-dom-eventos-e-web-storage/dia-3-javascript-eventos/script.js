@@ -69,5 +69,12 @@ function showHoliday(){
 
 newB.addEventListener('click', showHoliday);
 
+function createButFryday(name){
+  const bc = document.querySelector('.buttons-container');
+  const newBFriday = document.createElement('button');
+  newBFriday.className = 'btn-friday';
+  newBFriday.innerHTML = name;
+  bc.appendChild(newBFriday);
+}
 
-
+createButFryday('Sexta-feira');
