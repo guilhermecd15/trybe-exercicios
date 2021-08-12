@@ -42,7 +42,7 @@ function createDaysOfTheMonth() {
 
 createDaysOfTheMonth();
 
-function showHoliday(name){
+function createButHoliday(name){
   const bc = document.querySelector('.buttons-container');
   const newB = document.createElement('button');
   newB.id = 'btn-holiday';
@@ -50,4 +50,24 @@ function showHoliday(name){
   bc.appendChild(newB);
 }
 
-showHoliday('feriados');
+createButHoliday('feriados');
+
+const newB = document.querySelector('#btn-holiday');
+
+function showHoliday(){
+  const holiday = document.querySelectorAll('.holiday');
+  const branco = "white";
+  const corPadrao = "rgb(238,238,238)";
+  for (i= 0; i < holiday.length; i += 1){
+    if (holiday[i].style.backgroundColor === branco) {
+      holiday[i].style.backgroundColor = corPadrao;
+    } else {
+      holiday[i].style.backgroundColor = branco;
+    }
+  }
+}
+
+newB.addEventListener('click', showHoliday);
+
+
+
