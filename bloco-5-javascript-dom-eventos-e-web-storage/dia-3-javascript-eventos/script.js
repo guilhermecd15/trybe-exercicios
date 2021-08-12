@@ -21,7 +21,7 @@ function createDaysOfTheMonth() {
     const day = monthDays[i];
     const dayItem = document.createElement('li');
     if (day === 25) {
-      dayItem.className = 'day holiday fryday';
+      dayItem.className = 'day holiday friday';
       dayItem.innerHTML = day;
       monthDaysList.appendChild(dayItem)
     } else if (day === 24 || day === 31) {
@@ -29,7 +29,7 @@ function createDaysOfTheMonth() {
       dayItem.innerHTML = day;
       monthDaysList.appendChild(dayItem)
     } else if (day === 4 || day === 11 || day === 18) {
-      dayItem.className = 'day fryday';
+      dayItem.className = 'day friday';
       dayItem.innerHTML = day;
       monthDaysList.appendChild(dayItem)
     } else {
@@ -69,7 +69,7 @@ function showHoliday(){
 
 newB.addEventListener('click', showHoliday);
 
-function createButFryday(name){
+function createButFriday(name){
   const bc = document.querySelector('.buttons-container');
   const newBFriday = document.createElement('button');
   newBFriday.className = 'btn-friday';
@@ -77,4 +77,23 @@ function createButFryday(name){
   bc.appendChild(newBFriday);
 }
 
-createButFryday('Sexta-feira');
+createButFriday('Sexta-feira');
+
+const newBFriday = document.querySelector('.btn-friday');
+const gaveta = [];
+
+function showFriday(){
+  const friday = document.getElementsByClassName('friday');
+  const sextou = "Sextou!";
+  
+  for (i= 0; i < friday.length; i += 1){
+    gaveta.push(friday[i].innerHTML);
+    if (friday[i].innerHTML !== sextou) {
+      friday[i].innerHTML = sextou;
+    } else {
+      friday[i].innerHTML = gaveta[i];
+    }
+  }
+}
+
+newBFriday.addEventListener('click', showFriday);
