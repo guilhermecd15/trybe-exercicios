@@ -42,7 +42,7 @@ function createDaysOfTheMonth() {
 
 createDaysOfTheMonth();
 
-function createButHoliday(name){
+function createButHoliday(name) {
   const bc = document.querySelector('.buttons-container');
   const newB = document.createElement('button');
   newB.id = 'btn-holiday';
@@ -54,11 +54,11 @@ createButHoliday('feriados');
 
 const newB = document.querySelector('#btn-holiday');
 
-function showHoliday(){
+function showHoliday() {
   const holiday = document.querySelectorAll('.holiday');
   const branco = "white";
   const corPadrao = "rgb(238,238,238)";
-  for (i= 0; i < holiday.length; i += 1){
+  for (i = 0; i < holiday.length; i += 1) {
     if (holiday[i].style.backgroundColor === branco) {
       holiday[i].style.backgroundColor = corPadrao;
     } else {
@@ -69,7 +69,7 @@ function showHoliday(){
 
 newB.addEventListener('click', showHoliday);
 
-function createButFriday(name){
+function createButFriday(name) {
   const bc = document.querySelector('.buttons-container');
   const newBFriday = document.createElement('button');
   newBFriday.className = 'btn-friday';
@@ -82,11 +82,11 @@ createButFriday('Sexta-feira');
 const newBFriday = document.querySelector('.btn-friday');
 const gaveta = [];
 
-function showFriday(){
+function showFriday() {
   const friday = document.getElementsByClassName('friday');
   const sextou = "Sextou!";
-  
-  for (i= 0; i < friday.length; i += 1){
+
+  for (i = 0; i < friday.length; i += 1) {
     gaveta.push(friday[i].innerHTML);
     if (friday[i].innerHTML !== sextou) {
       friday[i].innerHTML = sextou;
@@ -100,11 +100,11 @@ newBFriday.addEventListener('click', showFriday);
 
 let d = document.querySelector('#days');
 
-function zoom(evento){
+function zoom(evento) {
   evento.target.style.fontSize = '30px';
 }
 
-function dzoom(evento){
+function dzoom(evento) {
   evento.target.style.fontSize = '20px';
 }
 
@@ -113,7 +113,7 @@ d.addEventListener('mouseout', dzoom);
 
 const mytasks = document.querySelector('.my-tasks');
 
-function addTask(tasks){
+function addTask(tasks) {
   const nTask = document.createElement('span');
   nTask.innerHTML = tasks;
   mytasks.appendChild(nTask);
@@ -121,7 +121,7 @@ function addTask(tasks){
 
 addTask('cozinhar');
 
-function legendColor(cor){
+function legendColor(cor) {
   const colorTask = document.createElement('div');
   colorTask.className = 'task';
   colorTask.style.backgroundColor = cor;
@@ -129,3 +129,15 @@ function legendColor(cor){
 }
 
 legendColor('green')
+
+const LegTask = document.querySelector('.task')
+
+function selectedTask(evento) {
+  const taskSelected = document.getElementsByClassName('task selected');
+  if (taskSelected.length === 1) {
+    evento.target.className = 'task';
+  } else {
+    evento.target.className = 'task selected';
+  }
+}
+LegTask.addEventListener('click', selectedTask);
