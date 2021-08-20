@@ -53,7 +53,7 @@ function enviar(event) {
     alert('Inválido');
   } else {
     const novosDados = document.createElement('div');
-    novosDados.className = 'dados'
+    novosDados.className = 'dados container mb-3'
     novosDados.innerHTML += nome.value;
     novosDados.innerHTML += '\n';
     novosDados.innerHTML += email.value;

@@ -1,74 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
-    <fieldset>
-      <div>
-      nome: <input type="text" maxlength="40" name="nome" required />
-      <br />
-      <br />
-      email: <input type="email" maxlength="50" name="email" required />
-      <br />
-      <br />
-      cpf: <input type="text" maxlength="11" name="cpf" required />
-      <br />
-      <br />
-      endereço: <input type="text" maxlength="200" name="endereco" required />
-      <br />
-      <br />
-      cidade: <input type="text" maxlength="28" name="cidade" required />
-      <br />
-      <br />
-      estado:
-      <select name="estado" id="estado"></select>
-      <label for="casa"
-        ><input
-          type="radio"
-          name="casa"
-          id="casa"
-          checked
-          required
-        />casa</label
-      >
-      <label for="apartamento"
-        ><input
-          type="radio"
-          name="casa"
-          id="apartamento"
-          required
-        />apartamento</label
-      >
-    </fieldset>
-    <fieldset>
-      Resumo Currículo
-      <br />
-      <br />
-      <textarea
-        name="curriculo"
-        id="curriculo"
-        cols="50"
-        rows="20"
-        maxlength="1000"
-      ></textarea>
-      <br />
-      <br />
-      cargo: <input type="text" required maxlength="40" name="cargo"/>
-      <br />
-      <br />
-      descrição do cargo: <input type="text" maxlength="500" name="descricao" required />
-      <br />
-      <br />
-      data <input type="date" name="date" id="date" required />
-    </fieldset>
-    <button type="submit" id="btnEnviar">enviar</button>
-    <button type="button" id="btnApagar">apagar</button>
+    <header class="text-center">
+      <h1 class="display-1">Formulário</h1>
+    </header>
+    <form action="" method="GET" class="container">
+      <fieldset>
+        <div class="mb-3">
+          Nome: <input  class="form-control" type="text" maxlength="40" name="nome" data-validate-field="nome" required />
+        </div>
+        <div class="mb-3">
+          Email: <input class="form-control" type="email" maxlength="50" name="email" data-validate-field="email" required />
+        </div>
+        <div class="mb-3">
+          CPF: <input class="form-control" type="text" maxlength="11" name="cpf" data-validate-field="cpf" required />
+        </div>
+        <div class="mb-3">
+          Endereço: <input class="form-control" type="text" maxlength="200" name="endereco" data-validate-field="endereco" required />
+        </div>
+        <div class="mb-3">
+          Cidade: <input class="form-control" type="text" maxlength="28" name="cidade" data-validate-field="cidade" required />
+        </div>
+        <div class="mb-3">
+          Estado:
+          <select name="estado" id="estado" class="form-select" data-validate-field="estado" aria-label="Default select example">
+          </select>
+        </div class="mb-3">
+        <div class="container">
+          <div class="form-check">
+            <label for="casa" class="form-check-label"
+              ><input 
+                class="form-check-input"
+                type="radio"
+                name="casa"
+                id="casa"
+                data-validate-field="radio"
+                checked
+                required
+              />Casa</label
+            >
+          </div>
+          <div class="form-check">
+            <label for="apartamento" class="form-check-label"
+              ><input
+                class="form-check-input"
+                type="radio"
+                name="casa"
+                id="apartamento"
+                data-validate-field="radio"
+                required
+              />Apartamento</label
+            >
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="mb-3">
+          <p>Resumo curriculo</p>
+          <textarea class="form-control"
+          name="curriculo"
+          id="curriculo"
+          data-validate-field="curriculo"
+          rows="15"
+          maxlength="1000"
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        Cargo: <input data-validate-field="cargo" class="form-control" type="text" required maxlength="40" name="cargo" />
+      </div>
+      <div class="mb-3">
+        Descrição do cargo:
+        <input data-validate-field="descricao" class="form-control" type="text" maxlength="500" name="descricao" required />
+      </div>
+        <div class="mb-3">
+        Data <input data-validate-field="data" class="form-control" type="date" name="date" id="myInputId" required />
+      </div>
+      </fieldset>
+    </form>
+    <div class="container">
+    <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
+    <button type="button" id="btnApagar" class="btn btn-danger">Apagar</button>
+  </div>
     <div class="dados"></div>
     <script src="./script.js"></script>
+</body>
+
   </body>
 </html>
