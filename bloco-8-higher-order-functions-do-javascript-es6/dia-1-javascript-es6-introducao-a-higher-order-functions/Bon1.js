@@ -42,28 +42,43 @@ const atkMage = mage => {
 const gameActions = {
   // Crie as HOFs neste objeto.
   warriorTurn: atkWarrior => {
-    let dmgWarrior = atkWarrior(warrior);
-    warrior.damage = dmgWarrior;
-    dragon.healthPoints -= dmgWarrior;
+    if (warrior.healthPoints > 0) {
+      let dmgWarrior = atkWarrior(warrior);
+      warrior.damage = dmgWarrior;
+      dragon.healthPoints -= dmgWarrior;
+    }
   },
   mageTurn: atkMage => {
-    let dmgMage = atkMage(mage);
-    mage.damage = dmgMage;
-    if (dmgMage > 0) {
-      mage.mana -= 15;
+    if (mage.healthPoints > 0) {
+      let dmgMage = atkMage(mage);
+      mage.damage = dmgMage;
+      if (dmgMage > 0) {
+        mage.mana -= 15;
+      }
+      dragon.healthPoints -= dmgMage;
     }
-    dragon.healthPoints -= dmgMage;
   },
   dragonTurn: atkDragon => {
-    let dmgDragon = atkDragon(dragon);
-    dragon.damage = dmgDragon;
-    warrior.healthPoints -= dmgDragon;
-    mage.healthPoints -= dmgDragon;
+    if (dragon.healthPoints > 0) {
+      let dmgDragon = atkDragon(dragon);
+      dragon.damage = dmgDragon;
+      warrior.healthPoints -= dmgDragon;
+      mage.healthPoints -= dmgDragon;
+    }
   },
   turnEnd: () => battleMembers
 };
 
-gameActions.warriorTurn(atkWarrior);
-gameActions.mageTurn(atkMage);
-gameActions.dragonTurn(atkDragon);
-console.log(gameActions.turnEnd());
+while (dragon.healthPoints > 0 && (warrior.healthPoints > 0 || mage.healthPoints > 0)) {
+  gameActions.warriorTurn(atkWarrior);
+  gameActions.mageTurn(atkMage);
+  gameActions.dragonTurn(atkDragon);
+  console.log(gameActions.turnEnd());
+  console.log('_____________________________________');
+}
+
+if (dragon.healthPoints < 0) {
+  console.log('Warrior & Mage WINSSS');
+} else if (dragon.healthPoints > 0) {
+  console.log('Dragon WINSSS');
+}
