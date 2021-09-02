@@ -13,7 +13,7 @@ const warrior = {
 };
 
 const dragon = {
-  healthPoints: 350,
+  healthPoints: 700,
   strength: 50,
   damage: undefined,
 };
@@ -31,12 +31,8 @@ const atkWarrior = warrior => {
 }
 
 const atkMage = mage => {
-  if (mage.mana > 15) {
-    const dmgMage = Math.floor(Math.random() * ((mage.intelligence * 2) - mage.intelligence) + mage.intelligence);
-    mage.mana -= 15;
-    return dmgMage;
-  }
-  return 'faltou mana';
+  const dmgMage = Math.floor(Math.random() * ((mage.intelligence * 2) - mage.intelligence) + mage.intelligence);
+  return dmgMage;
 }
 
 const gameActions = {
@@ -50,12 +46,16 @@ const gameActions = {
   },
   mageTurn: atkMage => {
     if (mage.healthPoints > 0) {
-      let dmgMage = atkMage(mage);
-      mage.damage = dmgMage;
-      if (dmgMage > 0) {
-        mage.mana -= 15;
+      if (mage.mana > 15) {
+        let dmgMage = atkMage(mage);
+        mage.damage = dmgMage;
+        if (dmgMage > 0) {
+          mage.mana -= 15;
+        }
+        dragon.healthPoints -= dmgMage;
+      } else {
+        console.log('Mage without mana');
       }
-      dragon.healthPoints -= dmgMage;
     }
   },
   dragonTurn: atkDragon => {
