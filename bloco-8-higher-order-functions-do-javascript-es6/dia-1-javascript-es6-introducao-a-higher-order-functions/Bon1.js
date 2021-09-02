@@ -63,7 +63,7 @@ const gameActions = {
   turnEnd: () => battleMembers
 };
 
-  gameActions.warriorTurn(atkWarrior);
-  gameActions.mageTurn(atkMage);
-  gameActions.dragonTurn(atkDragon);
-  console.log(gameActions.turnEnd());
+gameActions.warriorTurn(atkWarrior);
+gameActions.mageTurn(atkMage);
+gameActions.dragonTurn(atkDragon);
+console.log(gameActions.turnEnd());
