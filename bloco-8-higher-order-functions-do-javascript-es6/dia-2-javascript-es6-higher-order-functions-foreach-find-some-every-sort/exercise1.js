@@ -177,11 +177,15 @@ const expectedResult5 = false;
 
 function authorUnique() {
   // escreva seu código aqui
-  return books.every((book) => {
+  let dif = true;
+  books.forEach((book) => {
     books.some((someBook) => {
-      ((book.author.birthYear === someBook.author.birthYear) && (book.author.name !== someBook.author.name))
-    })
+     if (book.author.birthYear === someBook.author.birthYear && book.author.name !== someBook.author.name) {
+      dif = false;
+     }
+    });
   });
+  return dif;
 }
 
 assert.strictEqual(authorUnique(), expectedResult5);
