@@ -7,8 +7,8 @@ const pokemons = [
           value: 6.0,
           measurementUnit: "kg"
       },
-      image: "httpscdn2.bulbagarden.net/upload/b/b2/Spr_5b_025_m.png",
-      moreInfo: "httpsbulbapedia.bulbagarden.net/wiki/Pikachu_(Pok%C3%A9mon)"
+      image: "https:cdn2.bulbagarden.net/upload/b/b2/Spr_5b_025_m.png",
+      moreInfo: "https:bulbapedia.bulbagarden.net/wiki/Pikachu_(Pok%C3%A9mon)"
   },
   {
       id: 4,
@@ -18,8 +18,8 @@ const pokemons = [
           value: 8.5,
           measurementUnit: "kg"
       },
-      image: "httpscdn2.bulbagarden.net/upload/0/0a/Spr_5b_004.png",
-      moreInfo: "httpsbulbapedia.bulbagarden.net/wiki/Charmander_(Pok%C3%A9mon)"
+      image: "https:cdn2.bulbagarden.net/upload/0/0a/Spr_5b_004.png",
+      moreInfo: "https:bulbapedia.bulbagarden.net/wiki/Charmander_(Pok%C3%A9mon)"
   },
   {
       id: 10,
@@ -29,8 +29,8 @@ const pokemons = [
           value: 2.9,
           measurementUnit: "kg"
       },
-      image: "httpscdn2.bulbagarden.net/upload/8/83/Spr_5b_010.png",
-      moreInfo: "httpsbulbapedia.bulbagarden.net/wiki/Caterpie_(Pok%C3%A9mon)"
+      image: "https:cdn2.bulbagarden.net/upload/8/83/Spr_5b_010.png",
+      moreInfo: "https:bulbapedia.bulbagarden.net/wiki/Caterpie_(Pok%C3%A9mon)"
   },
   {
       id: 23,
@@ -40,8 +40,8 @@ const pokemons = [
           value: 6.9,
           measurementUnit: "kg"
       },
-      image: "httpscdn2.bulbagarden.net/upload/1/18/Spr_5b_023.png",
-      moreInfo: "httpsbulbapedia.bulbagarden.net/wiki/Ekans_(Pok%C3%A9mon)"
+      image: "https:cdn2.bulbagarden.net/upload/1/18/Spr_5b_023.png",
+      moreInfo: "https:bulbapedia.bulbagarden.net/wiki/Ekans_(Pok%C3%A9mon)"
   },
   {
       id: 65,
