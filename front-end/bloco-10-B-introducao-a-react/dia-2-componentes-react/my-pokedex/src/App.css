@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pokemon {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  border: solid 1px grey;
+  margin: 2%;
+  border-radius: 15px;
+}
+
+.pokemonInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pokemonInfo p {
+  padding: 5px;
+  text-align: center;
+}
+
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  margin: 40px;
+}
+
+.pokedex :nth-child(9) {
+  width: 84%;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
